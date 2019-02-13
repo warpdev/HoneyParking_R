@@ -5,11 +5,17 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
     private final int FRAGMENT1 = 1;
     private final int FRAGMENT2 = 2;
+    int bar_stat=1;
+    ImageView btn_home;
+    ImageView btn_fav;
+    ImageView btn_sale;
+    ImageView btn_my;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         //Intent i = new Intent(MainActivity.this,LoginActivity.class);
         //startActivity(i);
         callFragment(FRAGMENT1);
+        btn_home=findViewById(R.id.main_home_icn);
+        btn_fav=findViewById(R.id.main_fav_icn);
+        btn_sale=findViewById(R.id.main_sale_icn);
+        btn_my=findViewById(R.id.main_my_icn);
     }
     private void callFragment(int frament_no){
 
@@ -45,5 +55,43 @@ public class MainActivity extends AppCompatActivity {
     public void ck_search(View v){
         Intent i = new Intent(MainActivity.this,search_1.class);
         startActivity(i);
+    }
+    public void main_home_btn(View v){
+        if(bar_stat!=1){
+            bar_stat=1;
+            btn_home.setBackgroundResource(R.drawable.main_menu_active_home);
+            btn_fav.setBackgroundResource(R.drawable.main_menu_deactive_favorite);
+            btn_sale.setBackgroundResource(R.drawable.main_menu_deactive_coupon);
+            btn_my.setBackgroundResource(R.drawable.main_menu_deactive_myinfo);
+        }
+    }
+
+    public void main_fav_btn(View v){
+        if(bar_stat!=2){
+            bar_stat=2;
+            btn_home.setBackgroundResource(R.drawable.main_menu_deactive_home_copy);
+            btn_fav.setBackgroundResource(R.drawable.main_menu_active_favorite);
+            btn_sale.setBackgroundResource(R.drawable.main_menu_deactive_coupon);
+            btn_my.setBackgroundResource(R.drawable.main_menu_deactive_myinfo);
+        }
+    }
+
+    public void main_sale_btn(View v){
+        if(bar_stat!=3){
+            bar_stat=3;
+            btn_home.setBackgroundResource(R.drawable.main_menu_deactive_home_copy);
+            btn_fav.setBackgroundResource(R.drawable.main_menu_deactive_favorite);
+            btn_sale.setBackgroundResource(R.drawable.main_menu_active_coupon);
+            btn_my.setBackgroundResource(R.drawable.main_menu_deactive_myinfo);
+        }
+    }
+    public void main_my_btn(View v){
+        if(bar_stat!=4){
+            bar_stat=4;
+            btn_home.setBackgroundResource(R.drawable.main_menu_deactive_home_copy);
+            btn_fav.setBackgroundResource(R.drawable.main_menu_deactive_favorite);
+            btn_sale.setBackgroundResource(R.drawable.main_menu_deactive_coupon);
+            btn_my.setBackgroundResource(R.drawable.main_menu_active_myinfo);
+        }
     }
 }

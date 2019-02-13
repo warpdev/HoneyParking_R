@@ -36,11 +36,14 @@
             android:layout_height="50dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:id="@+id/main_menu_home">
+            android:id="@+id/main_menu_home"
+            android:onClick="main_home_btn">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/main_menu_active_home"/>
+                android:background="@drawable/main_menu_active_home"
+                android:id="@+id/main_home_icn"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -56,11 +59,13 @@
             android:layout_height="50dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:onClick="main_fav_btn"
             android:id="@+id/main_menu_favorite">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/main_menu_deactive_favorite"/>
+                android:background="@drawable/main_menu_deactive_favorite"
+                android:id="@+id/main_fav_icn"/>
             <TextView
                 android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -77,10 +82,12 @@
             android:layout_height="50dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:onClick="main_sale_btn"
             android:id="@+id/main_menu_sale">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/main_sale_icn"
                 android:background="@drawable/main_menu_deactive_coupon"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -97,10 +104,12 @@
             android:layout_height="50dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:onClick="main_my_btn"
             android:id="@+id/main_menu_my">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/main_my_icn"
                 android:background="@drawable/main_menu_deactive_myinfo"/>
             <TextView
                 android:layout_width="wrap_content"

@@ -20,7 +20,8 @@
         <activity android:name=".agree_page" />
         <activity android:name=".join" />
         <activity android:name=".forget" />
-        <activity android:name=".search_1"></activity>
+        <activity android:name=".search_1" />
+        <activity android:name=".search_selc"></activity>
     </application>
 
 </manifest>
