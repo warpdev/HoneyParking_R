@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".search_1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="36dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/search_bar">
+
+        <ImageButton
+            android:id="@+id/imageButtonback"
+            android:layout_width="9.5dp"
+            android:layout_height="17.5dp"
+            app:srcCompat="@drawable/join_icn_back_copy" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35.5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/sq_line_round"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#d4d4d4"
+                android:layout_marginLeft="11dp"
+                android:hint="목적지를 검색하세요 (장소, 주소 검색)"
+                android:background="@null"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_below="@id/search_bar"
+        android:id="@+id/search_tab_bar"
+        android:orientation="horizontal"
+        >
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:elevation="5dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/btn_able"
+            app:tabTextColor="@color/btn_able_txt"></android.support.design.widget.TabLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="15dp"
+            android:text="편집" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_tab_bar"
+        android:id="@+id/recentlist"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

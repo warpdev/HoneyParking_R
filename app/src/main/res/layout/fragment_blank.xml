@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".BlankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="175.5dp"
+        android:layout_height="79.5dp"
+        android:layout_marginTop="62dp"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/img_honeypark_logo" />
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="23.5dp"
+        android:background="@drawable/sq_line_round"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#d4d4d4"
+            android:layout_marginLeft="11dp"
+            android:hint="목적지를 검색하세요 (장소, 주소 검색)"
+            android:background="@null"
+            android:onClick="ck_search"
+            />
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="330dp"
+    android:layout_height="28.5dp"
+    android:layout_marginTop="34.5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#422813"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="주차 예약" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sq_line_round_y"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="10.5dp"
+            android:textColor="#422813"
+            android:letterSpacing="-0.05"
+            android:text="2019. 1. 8 (화)"
+            />
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="155dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="19.5dp"
+        android:layout_weight="1"
+        android:background="@drawable/sq_line_round_y"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_main_reservation_check">
+
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            android:textColor="#422813"
+            android:gravity="center_horizontal"
+            android:text="예약정보확인"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="155dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="19.5dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="20.5dp"
+        android:background="@drawable/sq_line_round_y"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_main_reservation_check">
+
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            android:textColor="#422813"
+            android:gravity="center_horizontal"
+            android:text="내주변주차장"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

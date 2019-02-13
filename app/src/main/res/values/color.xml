@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="yellow">#fecf33</color>
+    <color name="light_orange">#fdbd39</color>
+    <color name="peach">#ee6723</color>
+    <color name="btn_able">#f2c233</color>
+    <color name="btn_disable">#d4d4d4</color>
+    <color name="btn_able_txt">#422814</color>
+    <color name="btn_send_msg">#f7c733</color>
+</resources>
