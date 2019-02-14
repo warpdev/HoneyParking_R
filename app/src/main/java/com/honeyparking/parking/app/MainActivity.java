@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -16,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView btn_fav;
     ImageView btn_sale;
     ImageView btn_my;
+
+    RecyclerView mRecyclerViewF;
+    RecyclerView.LayoutManager mLayoutManagerF;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Intent i = new Intent(MainActivity.this,LoginActivity.class);
         //startActivity(i);
+
         callFragment(FRAGMENT1);
         btn_home=findViewById(R.id.main_home_icn);
         btn_fav=findViewById(R.id.main_fav_icn);
@@ -48,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
                 transaction.replace(R.id.fragment_container, fragment2);
                 transaction.commit();
                 break;
+            case 4:
+                my_frag fragment4 = new my_frag();
+                transaction.replace(R.id.fragment_container, fragment4);
+                transaction.commit();
+                break;
         }
 
     }
@@ -63,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             btn_fav.setBackgroundResource(R.drawable.main_menu_deactive_favorite);
             btn_sale.setBackgroundResource(R.drawable.main_menu_deactive_coupon);
             btn_my.setBackgroundResource(R.drawable.main_menu_deactive_myinfo);
+            callFragment(1);
         }
     }
 
@@ -73,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             btn_fav.setBackgroundResource(R.drawable.main_menu_active_favorite);
             btn_sale.setBackgroundResource(R.drawable.main_menu_deactive_coupon);
             btn_my.setBackgroundResource(R.drawable.main_menu_deactive_myinfo);
+            callFragment(2);
         }
     }
 
@@ -92,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
             btn_fav.setBackgroundResource(R.drawable.main_menu_deactive_favorite);
             btn_sale.setBackgroundResource(R.drawable.main_menu_deactive_coupon);
             btn_my.setBackgroundResource(R.drawable.main_menu_active_myinfo);
+            callFragment(4);
         }
     }
 }

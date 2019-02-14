@@ -40,6 +40,7 @@
             android:hint="목적지를 검색하세요 (장소, 주소 검색)"
             android:background="@null"
             android:onClick="ck_search"
+            android:fontFamily="@font/nanumsquarer"
             />
     </LinearLayout>
     <LinearLayout
@@ -55,6 +56,7 @@
             android:textColor="#422813"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:fontFamily="@font/nanumsquareeb"
             android:text="주차 예약" />
     </LinearLayout>
 
@@ -72,6 +74,8 @@
             android:layout_marginLeft="10.5dp"
             android:textColor="#422813"
             android:letterSpacing="-0.05"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanumsquareb"
             android:text="2019. 1. 8 (화)"
             />
 
@@ -105,6 +109,7 @@
             android:gravity="center_horizontal"
             android:text="예약정보확인"
             android:textStyle="bold"
+            android:fontFamily="@font/nanumsquareeb"
             />
     </LinearLayout>
 
@@ -121,7 +126,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/img_main_reservation_check">
+            android:background="@drawable/img_main_parking">
 
         </ImageView>
         <TextView
@@ -133,6 +138,7 @@
             android:gravity="center_horizontal"
             android:text="내주변주차장"
             android:textStyle="bold"
+            android:fontFamily="@font/nanumsquareeb"
             />
     </LinearLayout>
 </LinearLayout>

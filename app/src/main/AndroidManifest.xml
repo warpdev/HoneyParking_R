@@ -21,7 +21,8 @@
         <activity android:name=".join" />
         <activity android:name=".forget" />
         <activity android:name=".search_1" />
-        <activity android:name=".search_selc"></activity>
+        <activity android:name=".search_selc" />
+        <activity android:name=".order_check_page"></activity>
     </application>
 
 </manifest>

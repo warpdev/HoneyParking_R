@@ -29,6 +29,7 @@
             android:textColor="#422814"
             android:lineSpacingExtra="18.8sp"
             android:text="즐겨찾기"
+            android:fontFamily="@font/nanumsquareb"
             />
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
