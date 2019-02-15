@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".order_check_page">
+
+    <ImageView
+        android:id="@+id/imageButtonbackck"
+        android:layout_width="9.5dp"
+        android:layout_height="17.5dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/join_icn_back_copy" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="82.5dp"
+        android:layout_below="@id/imageButtonbackck"
+        android:orientation="vertical"
+        android:background="@drawable/sq_line_bot"
+        android:id="@+id/orderinfo"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#f1c233"
+            android:lineSpacingExtra="15.8sp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/nanumsquareb"
+            android:id="@+id/tmpname"
+        android:text="예약일시"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_below="@id/tmpname"
+            android:layout_marginLeft="14.5dp"
+            android:layout_marginTop="9dp"
+            android:textColor="#422814"
+            android:lineSpacingExtra="19.8sp"
+            android:fontFamily="@font/nanumsquareb"
+            tools:text="2019. 1. 18 (금) 16:00"
+            android:id="@+id/ordertime"
+            />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#545454"
+            android:layout_below="@id/tmpname"
+            android:layout_marginTop="10.5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15.5dp"
+            android:fontFamily="@font/nanumsquarer"
+        android:gravity="center_horizontal"
+        tools:text="예약취소"
+        />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_below="@id/orderinfo"
+            >
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></LinearLayout>
+</RelativeLayout>
