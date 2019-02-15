@@ -71,6 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/search_tab_bar"
-        android:id="@+id/recentlist"></android.support.v7.widget.RecyclerView>
+        android:id="@+id/recentlist"
+        android:onClick="ck_list"></android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

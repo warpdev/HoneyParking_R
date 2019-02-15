@@ -1,10 +1,12 @@
 package com.honeyparking.parking.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -35,5 +37,9 @@ public class search_1 extends AppCompatActivity {
 
 
 
+    }
+    public void ck_list(View v){
+        Intent i = new Intent(search_1.this,search_selc.class);
+        startActivity(i);
     }
 }
