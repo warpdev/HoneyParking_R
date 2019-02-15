@@ -29,6 +29,7 @@
         android:layout_marginTop="23.5dp"
         android:background="@drawable/sq_line_round"
         android:gravity="center_vertical"
+        android:onClick="ck_search"
         android:orientation="horizontal">
 
         <EditText

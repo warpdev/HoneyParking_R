@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btn_fav=findViewById(R.id.main_fav_icn);
         btn_sale=findViewById(R.id.main_sale_icn);
         btn_my=findViewById(R.id.main_my_icn);
+
     }
     private void callFragment(int frament_no){
 
@@ -51,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
                 // '프래그먼트2' 호출
                 FavoriteFrag fragment2 = new FavoriteFrag();
                 transaction.replace(R.id.fragment_container, fragment2);
+                transaction.commit();
+                break;
+            case 3:
+                sale_frag fragment3 = new sale_frag();
+                transaction.replace(R.id.fragment_container, fragment3);
                 transaction.commit();
                 break;
             case 4:
@@ -95,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             btn_fav.setBackgroundResource(R.drawable.main_menu_deactive_favorite);
             btn_sale.setBackgroundResource(R.drawable.main_menu_active_coupon);
             btn_my.setBackgroundResource(R.drawable.main_menu_deactive_myinfo);
+            callFragment(3);
         }
     }
     public void main_my_btn(View v){

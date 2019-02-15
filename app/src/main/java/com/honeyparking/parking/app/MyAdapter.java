@@ -11,6 +11,11 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
 
+    private static final int ITEM_VIEW_TYPE_STRS = 0 ;
+    private static final int ITEM_VIEW_TYPE_IMGS = 1 ;
+    private static final int ITEM_VIEW_TYPE_MAX = 2 ;
+
+
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView ivPicture;
         TextView tvPrice;
@@ -43,9 +48,15 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
         myViewHolder.ivPicture.setImageResource(InfoArrayList.get(position).drawableId);
         myViewHolder.tvPrice.setText(InfoArrayList.get(position).price);
     }
-
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.name_loc:
+                break;
+        }
+    }
     @Override
     public int getItemCount() {
         return InfoArrayList.size();
     }
+
 }

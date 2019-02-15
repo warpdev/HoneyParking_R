@@ -22,7 +22,8 @@
         <activity android:name=".forget" />
         <activity android:name=".search_1" />
         <activity android:name=".search_selc" />
-        <activity android:name=".order_check_page"></activity>
+        <activity android:name=".order_check_page" />
+        <activity android:name=".setting_activity"></activity>
     </application>
 
 </manifest>
