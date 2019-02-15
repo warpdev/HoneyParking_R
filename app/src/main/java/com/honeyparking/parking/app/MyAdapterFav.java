@@ -2,12 +2,12 @@
 package com.honeyparking.parking.app;
 
         import android.support.v7.widget.RecyclerView;
-        import android.view.LayoutInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.TextView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
-        import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class MyAdapterFav extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
 
@@ -24,8 +24,8 @@ public class MyAdapterFav extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
     }
 
-    private ArrayList<locateinfo> InfoArrayList;
-    MyAdapterFav(ArrayList<locateinfo> InfoArrayList){
+    private ArrayList<FavInfo> InfoArrayList;
+    MyAdapterFav(ArrayList<FavInfo> InfoArrayList){
         this.InfoArrayList = InfoArrayList;
     }
 
@@ -42,8 +42,9 @@ public class MyAdapterFav extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
         MyViewHolder myViewHolder = (MyViewHolder) holder;
 
-        myViewHolder.ivPicture.setText(InfoArrayList.get(position).price);
-        myViewHolder.tvPrice.setText(InfoArrayList.get(position).price);
+        myViewHolder.ivPicture.setText(InfoArrayList.get(position).park_name);
+        myViewHolder.tvPrice.setText(InfoArrayList.get(position).park_loc);
+        myViewHolder.tvnum.setText(InfoArrayList.get(position).park_cnt);
     }
 
     @Override

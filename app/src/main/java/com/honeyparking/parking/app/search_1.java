@@ -34,6 +34,8 @@ public class search_1 extends AppCompatActivity {
         TabLayout tabs=findViewById(R.id.tabs);
         tabs.addTab(tabs.newTab().setText("최근검색"));
         tabs.addTab(tabs.newTab().setText("즐겨찾기"));
+        Intent i = new Intent(search_1.this,search_selc.class);
+        startActivity(i);
 
 
 

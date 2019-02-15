@@ -38,6 +38,7 @@
             android:layout_marginLeft="17dp"
             android:lineSpacingExtra="22.3sp"
             android:text="아이디"
+            android:fontFamily="@font/nanumsquareb"
             android:textColor="#422814"
             android:textSize="14sp" />
 
@@ -47,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="29dp"
             android:background="@null"
+            android:fontFamily="@font/nanumsquarer"
             android:hint="아이디를 입력해주세요."
             android:lineSpacingExtra="22.3sp"
             android:textColorHint="#dfdfdf"
@@ -67,6 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="17.5dp"
+            android:fontFamily="@font/nanumsquareb"
             android:lineSpacingExtra="22.3sp"
             android:text="비밀번호"
             android:textColor="#422814"
@@ -77,6 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:fontFamily="@font/nanumsquarer"
             android:background="@null"
             android:hint="비밀번호를 입력해주세요."
             android:inputType="textPassword"
@@ -92,6 +96,7 @@
         android:layout_marginTop="10dp"
         android:background="#422814 "
         android:text="로그인하기"
+        android:fontFamily="@font/nanumsquareb"
         android:textColor="@android:color/background_light" />
 
     <LinearLayout
@@ -103,6 +108,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquareb"
             android:lineSpacingExtra="22.3sp"
             android:text="아직 꿀주차 회원이 아니신가요?"
             android:textColor="#422814"
@@ -114,6 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="7dp"
             android:autoLink="none"
+            android:fontFamily="@font/nanumsquareb"
             android:lineSpacingExtra="22.3sp"
             android:onClick="ck_sign"
             android:text="회원가입"
@@ -132,6 +139,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="22.3sp"
+            android:fontFamily="@font/nanumsquareb"
             android:text="아이디·비밀번호를 잊으셨나요?"
             android:textColor="#422814"
             android:textSize="14sp" />
@@ -141,6 +149,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
+            android:fontFamily="@font/nanumsquareb"
             android:text="아이디·비밀번호 찾기"
             android:textColor="#f7c733"
             android:textSize="14sp" />
@@ -166,6 +175,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
+            android:fontFamily="@font/nanumsquareb"
             android:lineSpacingExtra="22.3sp"
             android:text="카카오계정으로 시작하기"
             android:textColor="#282100"

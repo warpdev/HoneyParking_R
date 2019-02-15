@@ -23,7 +23,8 @@
         <activity android:name=".search_1" />
         <activity android:name=".search_selc" />
         <activity android:name=".order_check_page" />
-        <activity android:name=".setting_activity"></activity>
+        <activity android:name=".setting_activity" />
+        <activity android:name=".parking_detail"></activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:background="@drawable/sq_line_bot"
         android:id="@+id/rowcon"
         >
         <TextView
@@ -22,6 +23,7 @@
             android:layout_marginLeft="15dp"
             android:lineSpacingExtra="15.8sp"
             tools:text="A주차장"
+            android:fontFamily="@font/nanumsquareb"
             android:id="@+id/parkname"
             />
         <TextView
@@ -34,6 +36,7 @@
             android:layout_below="@id/parkname"
             android:layout_marginTop="10dp"
             android:id="@+id/parkloc"
+            android:fontFamily="@font/nanumsquareb"
             tools:text="서울시 혜화로 43"
             />
         <TextView
@@ -45,16 +48,11 @@
             android:layout_toRightOf="@id/parkloc"
             android:layout_below="@id/parkname"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/nanumsquareb"
             android:id="@+id/parkcnt"
             android:layout_marginLeft="21dp"
             tools:text="주차횟수 10회"
             />
-        <ImageButton
-            android:layout_width="8.5dp"
-            android:layout_height="16dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="15.5dp"
-            android:background="@drawable/favorite_icn_next" />
 
     </RelativeLayout>
 

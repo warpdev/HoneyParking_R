@@ -66,7 +66,7 @@
         android:layout_marginTop="25dp"
             android:layout_marginLeft="3dp"
             android:fontFamily="@font/nanumsquarer"
-        tools:text="님의 차"
+        android:text="님의 차"
         />
         <TextView
             android:layout_width="wrap_content"
@@ -84,6 +84,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/minibar"
+        android:layout_marginTop="6.5dp"
         android:layout_below="@id/carinfobar"
         android:layout_toRightOf="@id/carimg">
         <TextView
@@ -104,7 +105,7 @@
             android:lineSpacingExtra="23.8sp"
             android:layout_marginLeft="10dp"
             android:fontFamily="@font/nanumsquareb"
-            tools:text="|"
+            android:text="|"
             />
 
         <TextView
@@ -115,7 +116,7 @@
             android:textColor="#f7c633"
             android:textSize="12sp"
             android:fontFamily="@font/nanumsquareeb"
-            tools:text="정보 변경하기  &gt;" />
+            android:text="정보 변경하기  &gt;" />
     </LinearLayout>
 
     <LinearLayout

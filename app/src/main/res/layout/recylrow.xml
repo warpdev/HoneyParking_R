@@ -34,6 +34,7 @@
             android:textColor="#545454"
             android:text="검색지 이름"
             android:layout_gravity="center_vertical"
+            android:fontFamily="@font/nanumsquarer"
             android:id="@+id/name_loc"
             />
 

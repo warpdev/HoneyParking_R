@@ -34,6 +34,7 @@
                 android:textSize="14sp"
                 android:textColor="#d4d4d4"
                 android:layout_marginLeft="11dp"
+                android:fontFamily="@font/nanumsquarer"
                 android:hint="목적지를 검색하세요 (장소, 주소 검색)"
                 android:background="@null"
                 />
@@ -56,6 +57,7 @@
             android:elevation="5dp"
             app:tabGravity="fill"
             app:tabMode="fixed"
+            android:fontFamily="@font/nanumsquareb"
             app:tabIndicatorColor="@color/btn_able"
             app:tabTextColor="@color/btn_able_txt"></android.support.design.widget.TabLayout>
 
@@ -63,6 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="2"
+            android:fontFamily="@font/nanumsquarer"
             android:gravity="right|center_vertical"
             android:layout_marginRight="15dp"
             android:text="편집" />
