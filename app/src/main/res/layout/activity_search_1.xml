@@ -15,12 +15,12 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:id="@+id/search_bar">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/imageButtonback"
             android:layout_width="9.5dp"
             android:layout_height="17.5dp"
             app:srcCompat="@drawable/join_icn_back_copy" />
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="35.5dp"
             android:layout_marginLeft="15dp"
@@ -31,14 +31,21 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="#d4d4d4"
                 android:layout_marginLeft="11dp"
+                android:background="@null"
                 android:fontFamily="@font/nanumsquarer"
                 android:hint="목적지를 검색하세요 (장소, 주소 검색)"
-                android:background="@null"
-                />
-        </LinearLayout>
+                android:textColor="#d4d4d4"
+                android:id="@+id/user_search_input"
+                android:textSize="14sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="11dp"
+                android:onClick="btn_search_icn"
+                android:background="@drawable/icn_search"/>
+        </RelativeLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
