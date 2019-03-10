@@ -23,7 +23,6 @@ public class order_check_page extends AppCompatActivity {
         setContentView(R.layout.activity_order_check_page);
         generateRQCode("'sjb98'");
         params = getWindow().getAttributes();
-
     }
     @Override protected void onResume() {
         super.onResume();

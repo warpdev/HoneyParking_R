@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "1035654687611",
+    "firebase_url": "https://honeyparking-6912a.firebaseio.com",
+    "project_id": "honeyparking-6912a",
+    "storage_bucket": "honeyparking-6912a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035654687611:android:0e7cabfa2d6b8eff",
+        "android_client_info": {
+          "package_name": "com.honeyparking.parking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035654687611-afsln5a82e223sis1msg7qjtalt91cmg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBayFaOo43LnmD522d7vWptQZDb_mmfQ_Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035654687611:android:06c7ea6e1b22a305",
+        "android_client_info": {
+          "package_name": "com.honeyparking.parking.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035654687611-afsln5a82e223sis1msg7qjtalt91cmg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBayFaOo43LnmD522d7vWptQZDb_mmfQ_Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
