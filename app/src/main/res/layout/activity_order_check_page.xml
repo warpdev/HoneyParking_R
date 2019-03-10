@@ -65,6 +65,12 @@
         android:layout_below="@id/orderinfo"
             >
 
+        <ImageView
+            android:id="@+id/code_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/img_honeypark_logo" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"

@@ -1,5 +1,6 @@
 package com.honeyparking.parking.app;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -59,6 +60,7 @@ public class search_selc extends AppCompatActivity {
         mMapView.setLocationPoint(point_y,point_x);
         tmarker.setTMapPoint(tpoint);
         mMapView.addMarkerItem("mypoint",tmarker);
+        final Context context=this;
         tMapData.findAroundNamePOI(tpoint, "주차장", new TMapData.FindAroundNamePOIListenerCallback() {
             @Override
             public void onFindAroundNamePOI(ArrayList<TMapPOIItem> poiItem) {

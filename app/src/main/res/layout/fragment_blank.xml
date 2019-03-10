@@ -93,11 +93,13 @@
         android:layout_weight="1"
         android:background="@drawable/sq_line_round_y"
         android:gravity="center_vertical|center_horizontal"
+        android:onClick="btn_go_orderck"
         android:orientation="vertical">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="btn_go_orderck"
             android:background="@drawable/img_main_reservation_check">
 
         </ImageView>
@@ -110,6 +112,7 @@
             android:gravity="center_horizontal"
             android:text="예약정보확인"
             android:textStyle="bold"
+            android:onClick="btn_go_orderck"
             android:fontFamily="@font/nanumsquareeb"
             />
     </LinearLayout>

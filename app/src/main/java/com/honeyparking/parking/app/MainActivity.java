@@ -1,6 +1,8 @@
 package com.honeyparking.parking.app;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView btn_sale;
     ImageView btn_my;
 
+    String loginId, loginPwd;
+
     RecyclerView mRecyclerViewF;
     RecyclerView.LayoutManager mLayoutManagerF;
     @Override
@@ -27,6 +31,20 @@ public class MainActivity extends AppCompatActivity {
 
         //Intent i = new Intent(MainActivity.this,LoginActivity.class);
         //startActivity(i);
+        SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);
+
+        loginId = auto.getString("inputId",null);
+        loginPwd = auto.getString("inputPwd",null);
+
+
+        if(loginId=="null" && loginPwd=="null"){
+
+            Intent i = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(i);
+        }
+        else{
+            
+        }
 
         callFragment(FRAGMENT1);
         btn_home=findViewById(R.id.main_home_icn);
@@ -113,5 +131,14 @@ public class MainActivity extends AppCompatActivity {
             btn_my.setBackgroundResource(R.drawable.main_menu_active_myinfo);
             callFragment(4);
         }
+    }
+
+    public void btn_setting(View v){
+        Intent i= new Intent(MainActivity.this,setting_activity.class);
+        startActivity(i);
+    }
+    public void btn_go_orderck(View v){
+        Intent i= new Intent(MainActivity.this,order_check_page.class);
+        startActivity(i);
     }
 }

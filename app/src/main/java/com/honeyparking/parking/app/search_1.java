@@ -38,6 +38,7 @@ public class search_1 extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_1);
+
         mRecyclerView = findViewById(R.id.recentlist);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
@@ -47,6 +48,7 @@ public class search_1 extends AppCompatActivity {
         myAdapter = new MyAdapter(foodInfoArrayList);
 
         mRecyclerView.setAdapter(myAdapter);
+
         TabLayout tabs=findViewById(R.id.tabs);
         tabs.addTab(tabs.newTab().setText("최근검색"));
         tabs.addTab(tabs.newTab().setText("즐겨찾기"));
@@ -63,19 +65,30 @@ public class search_1 extends AppCompatActivity {
         input_text = findViewById(R.id.user_search_input);
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         configureMapView();
+        final Context context=search_1.this;
         foodInfoArrayList.clear();
         tMapData.findAllPOI(input_text.getText().toString(), new TMapData.FindAllPOIListenerCallback() {
             @Override
                 public void onFindAllPOI(ArrayList poiItem) {
+
                     for(int i = 0; i < poiItem.size(); i++) {
                         item = (TMapPOIItem) poiItem.get(i);
                         foodInfoArrayList.add(new locateinfo(R.drawable.icn_location,item.getPOIName().toString(),item.getPOIPoint()));
                     }
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    myAdapter.notifyDataSetChanged();
+                                }
+                            });
+                        }
+                    }).run();
                 Log.d("honeyparking",":"+foodInfoArrayList.size());
             }
         });
-        myAdapter.notifyDataSetChanged();
-        mRecyclerView.setAdapter(myAdapter);
         hideKeyboard();
     }
     private void configureMapView() {

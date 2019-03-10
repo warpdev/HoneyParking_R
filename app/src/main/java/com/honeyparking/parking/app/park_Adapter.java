@@ -56,8 +56,8 @@ public class park_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
         else {
             myViewHolder.park_detail.setText("주차불가");
-        }
     }
+}
     @Override
     public int getItemCount() {
         return InfoArrayList.size();
