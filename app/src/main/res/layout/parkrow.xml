@@ -28,9 +28,31 @@
             android:textSize="13.9sp"
             android:textColor="#606060"
             android:gravity="end"
+            android:layout_toLeftOf="@id/bartttt"
+            android:id="@+id/park_detail_2"
+            tools:text="도보 0분"
+            android:layout_marginRight="14.5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13.9sp"
+            android:textColor="#606060"
+            android:gravity="end"
+            android:id="@+id/bartttt"
+            android:layout_toLeftOf="@id/park_detail_1"
+            tools:text="|"
+            android:layout_marginRight="14.5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13.9sp"
+            android:textColor="#606060"
+            android:gravity="end"
             android:id="@+id/park_detail_1"
             android:layout_alignParentRight="true"
-            tools:text="시간당 1,200원    |      도보 8분"
+            tools:text="주차불가"
             android:layout_marginRight="14.5dp"
             />
 

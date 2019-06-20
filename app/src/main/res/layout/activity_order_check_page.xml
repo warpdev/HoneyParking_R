@@ -6,17 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".order_check_page">
 
-    <ImageView
-        android:id="@+id/imageButtonbackck"
-        android:layout_width="9.5dp"
-        android:layout_height="17.5dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="15dp"
-        android:background="@drawable/join_icn_back_copy" />
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/app_toolbar"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="82.5dp"
-        android:layout_below="@id/imageButtonbackck"
+        android:layout_below="@id/app_toolbar"
         android:orientation="vertical"
         android:background="@drawable/sq_line_bot"
         android:id="@+id/orderinfo"

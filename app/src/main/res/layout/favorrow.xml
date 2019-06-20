@@ -39,20 +39,20 @@
             android:fontFamily="@font/nanumsquareb"
             tools:text="서울시 혜화로 43"
             />
+
         <TextView
+            android:id="@+id/parkcnt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textColor="#422814"
-            android:lineSpacingExtra="21.8sp"
-            android:layout_toRightOf="@id/parkloc"
             android:layout_below="@id/parkname"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/nanumsquareb"
-            android:id="@+id/parkcnt"
             android:layout_marginLeft="21dp"
-            tools:text="주차횟수 10회"
-            />
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/parkloc"
+            android:fontFamily="@font/nanumsquareb"
+            android:lineSpacingExtra="21.8sp"
+            android:text="주차가능"
+            android:textColor="#422814"
+            android:textSize="14sp" />
 
     </RelativeLayout>
 

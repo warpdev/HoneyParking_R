@@ -4,37 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_light"
     tools:context=".parking_detail">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:layout_marginTop="36dp"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:id="@+id/topbardetail">
 
-        <ImageView
-            android:id="@+id/imageButtonback"
-            android:layout_width="9.5dp"
-            android:layout_height="17.5dp"
-            android:background="@drawable/join_icn_back_copy" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24.5dp"
-            android:textSize="17sp"
-            android:textColor="#422814"
-            android:lineSpacingExtra="18.8sp"
-            android:text="A 주차장"
-            android:fontFamily="@font/nanumsquareb"
-            />
-    </LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/app_toolbar"/>
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/topbardetail"/>
+        android:layout_below="@id/app_toolbar"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,27 +30,26 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/sq_line_bot">
-            <TextView
-                android:layout_width="87dp"
-                android:layout_marginLeft="35.5dp"
-                android:layout_height="75dp"
-                android:background="@drawable/img_parking_info"
-                android:gravity="center"
-                android:textColor="#422814"
-                android:textSize="14sp"
-                android:text="도보
-8분" />
 
             <TextView
                 android:layout_width="87dp"
-                android:layout_marginLeft="14dp"
                 android:layout_height="75dp"
+                android:layout_marginLeft="35.5dp"
                 android:background="@drawable/img_parking_info"
                 android:gravity="center"
+                android:text="총 200구역"
                 android:textColor="#422814"
-                android:textSize="14sp"
-                android:text="시간당
-1,200원" />
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="87dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/img_parking_info"
+                android:gravity="center"
+                android:text="2꿀/시간"
+                android:textColor="#422814"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="87dp"
@@ -93,45 +74,35 @@
                 android:layout_marginLeft="14.5dp"
                 android:layout_marginTop="17.5dp"
                 android:lineSpacingExtra="21.8sp"
+                android:text="운영시간"
                 android:textColor="#422814"
-                android:textSize="14sp"
-                tools:text="주차 시간 설정" />
+                android:textSize="14sp" />
+
             <TextView
+                android:id="@+id/preorder_time_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13.9sp"
-                android:textColor="#606060"
-                android:gravity="end"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="17.5dp"
                 android:layout_marginRight="15dp"
-                android:layout_alignParentRight="true"
-                android:id="@+id/preorder_time_text"
-                android:text="예약시간   |    15:05"
-                />
-            <Button
-                android:layout_width="128dp"
-                android:layout_height="43dp"
-                android:layout_marginRight="15dp"
-                android:layout_below="@id/preorder_time_text"
-                android:background="@drawable/sq_line_all_yellow"
-                android:textSize="13.9sp"
-                android:textColor="#f7c633"
-                android:layout_marginTop="14.5dp"
-                android:text="시작 시간 선택하기"
-                android:layout_alignParentRight="true"/>
+                android:gravity="end"
+                android:text="9:00 ~ 22:00"
+                android:textColor="#606060"
+                android:textSize="13.9sp" />
 
         </RelativeLayout>
     </LinearLayout>
+
     <Button
+        android:id="@+id/btn_order_pay"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
-        android:textSize="20sp"
-        android:textColor="#422814"
-        android:lineSpacingExtra="15.8sp"
-        android:text="예약하기"
+        android:background="@drawable/custom_btn"
         android:fontFamily="@font/nanumsquareb"
-        android:id="@+id/btn_order_pay"
-        android:background="@drawable/custom_btn"/>
+        android:lineSpacingExtra="15.8sp"
+        android:text="네비게이션"
+        android:textColor="#422814"
+        android:textSize="20sp" />
 
 </RelativeLayout>

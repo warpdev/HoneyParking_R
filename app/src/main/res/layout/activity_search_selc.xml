@@ -4,67 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_light"
     tools:context=".search_selc">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:layout_marginTop="36dp"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:id="@+id/search_bar1">
 
-        <ImageButton
-            android:id="@+id/imageButtonback"
-            android:layout_width="9.5dp"
-            android:layout_height="17.5dp"
-            app:srcCompat="@drawable/join_icn_back_copy" />
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/app_toolbar">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="35.5dp"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/sq_line_round"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_width="wrap_content"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:onClick="back_search"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35.5dp"
+                android:background="@drawable/sq_line_round"
+                android:gravity="center_vertical"
+                android:onClick="back_search"
+                android:orientation="horizontal">
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="#d4d4d4"
-                android:layout_marginLeft="11dp"
-                android:fontFamily="@font/nanumsquarer"
-                android:hint="목적지를 검색하세요 (장소, 주소 검색)"
-                android:background="@null"
-                />
+                <EditText
+                    android:id="@+id/user_search_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/nanumsquarer"
+                    android:hint="목적지를 검색하세요 (장소, 주소 검색)"
+                    android:inputType="text"
+                    android:onClick="back_search"
+                    android:textColor="#d4d4d4"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="11dp"
+                    android:onClick="back_search"
+                    android:background="@drawable/icn_search"/>
+            </RelativeLayout>
         </LinearLayout>
-    </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="302dp"
-        android:layout_below="@id/search_bar1"
+        android:layout_height="332dp"
+        android:layout_below="@id/app_toolbar"
         android:orientation="vertical"
+        android:layout_marginTop="21.5dp"
         android:id="@+id/mapview"></LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/mapview"
-        android:layout_above="@id/selc_btn"
+        android:layout_alignParentBottom="true"
         android:id="@+id/park_list">
 
     </android.support.v7.widget.RecyclerView>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        android:textSize="20sp"
-        android:id="@+id/selc_btn"
-        android:textColor="#422814"
-        android:lineSpacingExtra="15.8sp"
-        android:background="@drawable/custom_btn"
-        android:fontFamily="@font/nanumsquareb"
-        android:onClick="btn_let_pay"
-        android:text="주차장 선택"/>
 
 </RelativeLayout>

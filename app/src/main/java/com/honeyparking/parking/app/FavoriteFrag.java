@@ -33,9 +33,9 @@ public class FavoriteFrag extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         ArrayList<FavInfo> parkInfoArrayList = new ArrayList<>();
-        parkInfoArrayList.add(new FavInfo("A 주차장","서울시혜화로 43","주차횟수10회"));
-        parkInfoArrayList.add(new FavInfo("A 주차장","서울시혜화로 43","주차횟수10회"));
-        parkInfoArrayList.add(new FavInfo("A 주차장","서울시혜화로 43","주차횟수10회"));
+        parkInfoArrayList.add(new FavInfo("A 주차장","서울시혜화로 43","주차가능"));
+        parkInfoArrayList.add(new FavInfo("B 주차장","서울시혜화로 43","주차불가"));
+        parkInfoArrayList.add(new FavInfo("C 주차장","서울시혜화로 43","주차가능"));
 
         MyAdapterFav myAdapter = new MyAdapterFav(parkInfoArrayList);
 

@@ -4,9 +4,11 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,6 +40,10 @@ public class join extends AppCompatActivity {
         editphone = findViewById(R.id.editText_phone);
         editpwd = findViewById(R.id.editText_joinpw);
         final Button summitjoin=findViewById(R.id.Big_btn);
+        Toolbar tb = (Toolbar) findViewById(R.id.app_toolbar) ;
+        setSupportActionBar(tb) ;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("회원가입");
 
         editid.addTextChangedListener(new TextWatcher() {
             @Override
@@ -124,7 +130,16 @@ public class join extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ //toolbar의 back키 눌렀을 때 동작
+                finish();
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }
     public void submit_join(View V) {
         editid = findViewById(R.id.editText_joinid);
         editname = findViewById(R.id.editText_name);

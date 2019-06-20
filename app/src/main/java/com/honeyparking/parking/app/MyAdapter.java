@@ -37,7 +37,6 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         public void onClick(View v) {
             Context context = v.getContext();
             Intent tii=new Intent(v.getContext(),search_selc.class);
-            Toast.makeText(context, tPoint +"", Toast.LENGTH_LONG).show();
             tii.putExtra("p_x", tPoint.getLatitude());
             tii.putExtra("p_y", tPoint.getLongitude());
             v.getContext().startActivity(tii);

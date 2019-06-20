@@ -3,41 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".my_frag">
 
     <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:layout_marginTop="36dp"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:id="@+id/topbarmy">
 
-        <ImageView
-            android:id="@+id/imageButtonbackmy"
-            android:layout_width="9.5dp"
-            android:layout_height="17.5dp"
-            android:background="@drawable/join_icn_back_copy" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24.5dp"
-            android:textSize="17sp"
-            android:textColor="#422814"
-            android:lineSpacingExtra="18.8sp"
-            android:fontFamily="@font/nanumsquareb"
-            android:text="내정보"
-            />
-    </LinearLayout>
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="내정보"
+        android:id="@+id/app_toolbar"/>
     <ImageView
         android:layout_width="40.5dp"
         android:layout_height="29dp"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="28dp"
-        android:layout_below="@id/topbarmy"
+        android:layout_below="@id/app_toolbar"
         android:id="@+id/carimg"
         android:background="@mipmap/logo_car"/>
     <LinearLayout
@@ -45,18 +26,18 @@
         android:layout_height="wrap_content"
         android:id="@+id/carinfobar"
         android:layout_toRightOf="@id/carimg"
-        android:layout_below="@id/topbarmy">
+        android:layout_below="@id/app_toolbar">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="#422814"
-            android:lineSpacingExtra="17.8sp"
-            android:layout_marginTop="25dp"
             android:layout_marginLeft="9dp"
+            android:layout_marginTop="25dp"
             android:fontFamily="@font/nanumsquareeb"
-            tools:text="홍길동"
-            />
+            android:lineSpacingExtra="17.8sp"
+            android:text="서종배"
+            android:textColor="#422814"
+            android:textSize="18sp" />
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,18 +49,22 @@
             android:fontFamily="@font/nanumsquarer"
         android:text="님의 차"
         />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="#422814"
-            android:lineSpacingExtra="17.8sp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="25dp"
-            tools:text="56아 2906"
             android:fontFamily="@font/nanumsquareeb"
-            />
+            android:lineSpacingExtra="17.8sp"
+            android:text="523꿀"
+            android:textColor="#422814"
+            android:textSize="18sp" />
     </LinearLayout>
+
+
+
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -87,16 +72,16 @@
         android:layout_marginTop="6.5dp"
         android:layout_below="@id/carinfobar"
         android:layout_toRightOf="@id/carimg">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:textColor="#422814"
-            android:lineSpacingExtra="23.8sp"
-            tools:text="총 주차횟수 23회"
-            android:fontFamily="@font/nanumsquareb"
             android:layout_marginLeft="9dp"
-            />
+            android:fontFamily="@font/nanumsquareb"
+            android:lineSpacingExtra="23.8sp"
+            android:text="총 주차횟수 23회"
+            android:textColor="#422814"
+            android:textSize="12sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -145,23 +130,7 @@
             android:text="결제"
             />
     </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:background="@drawable/sq_line_bot">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="#422814"
-                android:lineSpacingExtra="21.8sp"
-                android:layout_marginLeft="16dp"
-                android:fontFamily="@font/nanumsquareb"
-                android:text="쿠폰함"
-                />
-        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
