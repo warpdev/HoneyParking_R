@@ -1,9 +1,11 @@
 package com.honeyparking.parking.app;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 public class parking_detail extends AppCompatActivity {
 
@@ -12,9 +14,10 @@ public class parking_detail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parking_detail);
         Toolbar tb = (Toolbar) findViewById(R.id.app_toolbar) ;
+        Intent input_i=getIntent();
         setSupportActionBar(tb) ;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("종배주차장");
+        getSupportActionBar().setTitle(input_i.getExtras().getString("park_name"));
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

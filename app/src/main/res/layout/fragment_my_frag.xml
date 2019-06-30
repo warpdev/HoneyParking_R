@@ -11,7 +11,7 @@
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:title="내정보"
+        app:title="MY 꿀"
         android:id="@+id/app_toolbar"/>
     <ImageView
         android:layout_width="40.5dp"

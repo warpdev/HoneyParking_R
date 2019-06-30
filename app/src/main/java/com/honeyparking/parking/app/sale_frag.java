@@ -31,9 +31,6 @@ public class sale_frag extends Fragment {
 
         View v=inflater.inflate(R.layout.fragment_sale_frag, container, false);
 
-        TabLayout tabs1= (TabLayout)v.findViewById(R.id.tabs1);
-        tabs1.addTab(tabs1.newTab().setText("주차쿠폰"));
-        tabs1.addTab(tabs1.newTab().setText("제휴쿠폰"));
         return v;
     }
 }

@@ -1,6 +1,8 @@
 package com.honeyparking.parking.app;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -20,12 +22,16 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import javax.net.ssl.HttpsURLConnection;
+
 
 public class join extends AppCompatActivity {
 
-    private static String IP_ADDRESS = "13.59.15.160";
-    private static String TAG="http";
+    private static String IP_ADDRESS = "18.222.46.170";
+    private static String TAG="https";
 
+    private SharedPreferences data_origin;
+    private SecureSharedPreferences appData;
     private EditText editname;
     private EditText editphone;
     private EditText editid;
@@ -45,6 +51,10 @@ public class join extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("회원가입");
 
+
+        SSLConnect ssl=new SSLConnect();
+
+        ssl.postHttps(TAG+"://"+IP_ADDRESS,1000,1000);
         editid.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -150,7 +160,12 @@ public class join extends AppCompatActivity {
         String mId = editid.getText().toString();
         String mPwd = editpwd.getText().toString();
         InsertData task=new InsertData();
-        task.execute("http://"+IP_ADDRESS+"/honeyParking/insert.php",mName,mPhone,mId,mPwd);
+        data_origin=getSharedPreferences("appData",MODE_PRIVATE);
+        appData=new SecureSharedPreferences(data_origin);
+        appData.put("id",mId);
+        appData.put("pw",mPwd);
+        task.execute("https://"+IP_ADDRESS+"/honeyParking/insert.php",mName,mPhone,mId,mPwd);
+
     }
 
     class InsertData extends AsyncTask<String, Void, String> {
@@ -170,6 +185,10 @@ public class join extends AppCompatActivity {
 
             progressDialog.dismiss();
             Log.d(TAG, "POST response  - " + result);
+            progressDialog.onDetachedFromWindow();
+            Intent i=new Intent(join.this,MainActivity.class);
+            startActivity(i);
+            finish();
         }
 
 
@@ -188,30 +207,30 @@ public class join extends AppCompatActivity {
             try {
 
                 URL url = new URL(serverURL);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                HttpsURLConnection httpsURLConnection = (HttpsURLConnection) url.openConnection();
 
 
-                httpURLConnection.setReadTimeout(5000);
-                httpURLConnection.setConnectTimeout(5000);
-                httpURLConnection.setRequestMethod("POST");
-                httpURLConnection.connect();
+                httpsURLConnection.setReadTimeout(5000);
+                httpsURLConnection.setConnectTimeout(5000);
+                httpsURLConnection.setRequestMethod("POST");
+                httpsURLConnection.connect();
 
 
-                OutputStream outputStream = httpURLConnection.getOutputStream();
+                OutputStream outputStream = httpsURLConnection.getOutputStream();
                 outputStream.write(postParameters.getBytes("UTF-8"));
                 outputStream.flush();
                 outputStream.close();
 
 
-                int responseStatusCode = httpURLConnection.getResponseCode();
+                int responseStatusCode = httpsURLConnection.getResponseCode();
                 Log.d(TAG, "POST response code - " + responseStatusCode);
                 //
 
                 InputStream inputStream;
-                if (responseStatusCode == HttpURLConnection.HTTP_OK) {
-                    inputStream = httpURLConnection.getInputStream();
+                if (responseStatusCode == HttpsURLConnection.HTTP_OK) {
+                    inputStream = httpsURLConnection.getInputStream();
                 } else {
-                    inputStream = httpURLConnection.getErrorStream();
+                    inputStream = httpsURLConnection.getErrorStream();
                 }
 
 

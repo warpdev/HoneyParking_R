@@ -1,6 +1,8 @@
 
 package com.honeyparking.parking.app;
 
+        import android.content.Context;
+        import android.content.Intent;
         import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +13,7 @@ import java.util.ArrayList;
 
 public class MyAdapterFav extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView ivPicture;
         TextView tvPrice;
         TextView tvnum;
@@ -21,6 +23,13 @@ public class MyAdapterFav extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             ivPicture = view.findViewById(R.id.parkname);
             tvPrice = view.findViewById(R.id.parkloc);
             tvnum=view.findViewById(R.id.parkcnt);
+        }
+        @Override
+        public void onClick(View v) {
+            Context context = v.getContext();
+            Intent ittt= new Intent(v.getContext(),payment_result.class);
+            ittt.putExtra("type",1);
+           // v.getContext().startActivity(ittt);
         }
     }
 

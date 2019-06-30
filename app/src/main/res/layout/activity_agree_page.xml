@@ -66,6 +66,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="15.5dp"
+                android:onClick="btn_en"
                 android:background="@drawable/custom_ck_box"
                 android:button="@null" />
             <TextView
@@ -101,6 +102,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="15.5dp"
+                android:onClick="btn_en"
                 android:background="@drawable/custom_ck_box"
                 android:button="@null" />
 
@@ -137,6 +139,7 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="15.5dp"
                 android:background="@drawable/custom_ck_box"
+                android:onClick="btn_en"
                 android:button="@null" />
 
             <TextView
@@ -172,6 +175,7 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="15.5dp"
                 android:background="@drawable/custom_ck_box"
+                android:onClick="btn_en"
                 android:button="@null" />
 
             <TextView

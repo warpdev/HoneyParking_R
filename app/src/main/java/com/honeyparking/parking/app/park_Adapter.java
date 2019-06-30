@@ -37,6 +37,9 @@ public class park_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
             Context context = v.getContext();
             Intent tii=new Intent(v.getContext(),parking_detail.class);
+            tii.putExtra("park_name",park_name.getText());
+            tii.putExtra("park_car",park_dist.getText());
+            tii.putExtra("park_iscan",park_detail.getText());
             v.getContext().startActivity(tii);
         }
     }

@@ -41,6 +41,28 @@ public class agree_page extends AppCompatActivity {
         Intent i = new Intent(this,join.class);
         startActivity(i);
     }
+
+    public void btn_en(View V){
+
+        ck_all= findViewById(R.id.checkBox1);
+        ck1=findViewById(R.id.checkBox2);
+        ck2=findViewById(R.id.checkBox3);
+        ck3=findViewById(R.id.checkBox4);
+        ck4=findViewById(R.id.checkBox5);
+
+        ck_all.setChecked((ck1.isChecked()&ck2.isChecked()&ck3.isChecked()&ck4.isChecked()));
+
+        boolean t=ck_all.isChecked();
+        Button btn= findViewById(R.id.Big_btn);
+        btn.setEnabled(t);
+        if(t){
+            int tcolor= ContextCompat.getColor(this,R.color.btn_able_txt);
+            btn.setTextColor(tcolor);
+        }
+        else{
+            btn.setTextColor(Color.WHITE);
+        }
+    }
     public void all_ck(View V){
 
         ck_all= findViewById(R.id.checkBox1);

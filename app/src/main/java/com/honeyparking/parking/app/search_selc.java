@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -87,6 +89,9 @@ public class search_selc extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
+        Toolbar tb = (Toolbar) findViewById(R.id.app_toolbar) ;
+        setSupportActionBar(tb) ;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         myAdapter = new park_Adapter(parkInfoArrayList);
 
@@ -117,6 +122,16 @@ public class search_selc extends AppCompatActivity {
 
 
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ //toolbar의 back키 눌렀을 때 동작
+                finish();
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private static void disableSSLCertificateChecking() {
@@ -255,6 +270,9 @@ public class search_selc extends AppCompatActivity {
             }
 
         }
+    }
+    public void back_search(View v){
+        finish();
     }
 
 

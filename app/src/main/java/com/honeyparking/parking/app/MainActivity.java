@@ -22,6 +22,15 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private SharedPreferences appdataorigin;
+    private SecureSharedPreferences appData;
+
+    private static String IP_ADDRESS = "18.222.46.170";
+    private static String TAG="https";
+
+    private String sId;
+    private String sPw;
     private final int FRAGMENT1 = 1;
     private final int FRAGMENT2 = 2;
     int bar_stat = 1;
@@ -51,19 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Intent i = new Intent(MainActivity.this,LoginActivity.class);
         //startActivity(i);
-        SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);
 
-        loginId = auto.getString("inputId", null);
-        loginPwd = auto.getString("inputPwd", null);
-
-
-        if (loginId == "null" && loginPwd == "null") {
-
-            Intent i = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(i);
-        } else {
-
-        }
 
         callFragment(FRAGMENT1);
         btn_home = findViewById(R.id.main_home_icn);
@@ -107,6 +104,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void go_pay(View v){
+        Intent i=new Intent(MainActivity.this,payment_result.class);
+        i.putExtra("type",1);
+        startActivity(i);
+    }
     public void onPause(){
         super.onPause();
         if(ckkkk==1) {

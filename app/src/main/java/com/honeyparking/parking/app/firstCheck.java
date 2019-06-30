@@ -27,7 +27,7 @@ public class firstCheck extends Activity {
     private SharedPreferences appdataorigin;
     private SecureSharedPreferences appData;
 
-    private static String IP_ADDRESS = "13.59.15.160";
+    private static String IP_ADDRESS = "18.222.46.170";
     private static String TAG="https";
 
     private String sId;
@@ -45,12 +45,11 @@ public class firstCheck extends Activity {
 
         sId=appData.get("id","0");
         sPw=appData.get("pw","0");
-        //loginDB lDB= new loginDB();
-        //lDB.execute();
+        loginDB lDB= new loginDB();
+        lDB.execute();
 
-        Intent i=new Intent(firstCheck.this,MainActivity.class);
-        startActivity(i);
-        finish();
+        //Intent i=new Intent(firstCheck.this,MainActivity.class);
+        //startActivity(i);
     }
 
     public class loginDB extends AsyncTask<Void, Integer, Void> {
@@ -112,12 +111,14 @@ public class firstCheck extends Activity {
                     Log.d("honey","1111");
                     Intent i=new Intent(firstCheck.this,LoginActivity.class);
                     startActivity(i);
+                    finish();
                 }
                 else if(data.equals("1"))
                 {
                     Log.d("honey","2222");
                     Intent i=new Intent(firstCheck.this, MainActivity.class);
                     startActivity(i);
+                    finish();
                 }
 
             } catch (MalformedURLException e) {

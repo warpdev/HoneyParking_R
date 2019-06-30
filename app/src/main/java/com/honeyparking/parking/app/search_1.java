@@ -85,6 +85,7 @@ public class search_1 extends AppCompatActivity {
         mMapView = new TMapView(this);
         input_text = findViewById(R.id.user_search_input);
 
+        configureMapView();
         input_text.setImeOptions(EditorInfo.IME_ACTION_SEARCH);
         input_text.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -120,7 +121,6 @@ public class search_1 extends AppCompatActivity {
     }
     public void go_search(){
         input_text = findViewById(R.id.user_search_input);
-        configureMapView();
         final Context context=search_1.this;
         foodInfoArrayList.clear();
 
